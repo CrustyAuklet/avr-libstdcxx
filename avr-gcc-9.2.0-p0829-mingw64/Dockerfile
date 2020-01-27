@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/crustyauklet/avr-libstdcxx/libstdcxx-base:latest
+FROM crustyauklet/avr-libstdcxx:latest
 
 RUN apt-get -y update \
 	&& apt-get install -y curl mingw-w64 mingw-w64-common mingw-w64-i686-dev mingw-w64-x86-64-dev mingw-w64-tools\

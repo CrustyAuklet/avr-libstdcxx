@@ -1,4 +1,4 @@
-FROM crustyauklet/avr-libstdcxx:latest
+FROM crustyauklet/avr-libstdcxx:base
 
 ENV PREFIX=/opt/avr-gcc
 WORKDIR /opt
