@@ -1,4 +1,4 @@
-FROM crustyauklet/avr-libstdcxx:9.2.0
+FROM crustyauklet/avr-libstdcxx:10.1.0
 
 RUN apt-get -y update \
 	&& apt-get install -y curl mingw-w64 mingw-w64-common mingw-w64-i686-dev mingw-w64-x86-64-dev mingw-w64-tools\
