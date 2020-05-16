@@ -64,6 +64,6 @@ RUN echo "*** Creating archives for avr-gcc compilers ***" \
 	&& ln -s /opt/avr-gcc /opt/avr-gcc-10.1.0-P0829 \
 	&& tar chzvf avr-gcc-10.1.0-P0829-x86_64-linux.tar.gz avr-gcc-10.1.0-P0829 \
 	&& rm /opt/avr-gcc-10.1.0-P0829 \
-	&& ln -s $PREFIX_WIN /opt/avr-gcc-10.1.0-P0829 \
+	&& ln -sfn $PREFIX_WIN /opt/avr-gcc-10.1.0-P0829 \
 	&& tar chzvf avr-gcc-10.1.0-P0829-$HOST_WIN.tar.gz avr-gcc-10.1.0-P0829 \
 	&& rm /opt/avr-gcc-10.1.0-P0829
