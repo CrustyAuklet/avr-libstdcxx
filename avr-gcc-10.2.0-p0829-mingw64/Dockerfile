@@ -1,4 +1,4 @@
-FROM crustyauklet/avr-libstdcxx:10.1.0
+FROM crustyauklet/avr-libstdcxx:10.2.0
 
 RUN apt-get -y update \
 	&& apt-get install -y curl mingw-w64 mingw-w64-common mingw-w64-i686-dev mingw-w64-x86-64-dev mingw-w64-tools\
@@ -61,9 +61,9 @@ RUN cd gcc/obj-avr-win32 \
 # archive the ubuntu and win32 version of the compiler and libcxx
 # links used to have a nicely named root directory on the eventual host system
 RUN echo "*** Creating archives for avr-gcc compilers ***" \
-	&& ln -s /opt/avr-gcc /opt/avr-gcc-10.1.0-P0829 \
-	&& tar chzvf avr-gcc-10.1.0-P0829-x86_64-linux.tar.gz avr-gcc-10.1.0-P0829 \
-	&& rm /opt/avr-gcc-10.1.0-P0829 \
-	&& ln -sfn $PREFIX_WIN /opt/avr-gcc-10.1.0-P0829 \
-	&& tar chzvf avr-gcc-10.1.0-P0829-$HOST_WIN.tar.gz avr-gcc-10.1.0-P0829 \
-	&& rm /opt/avr-gcc-10.1.0-P0829
+	&& ln -s /opt/avr-gcc /opt/avr-gcc-10.2.0-P0829 \
+	&& tar chzvf avr-gcc-10.2.0-P0829-x86_64-linux.tar.gz avr-gcc-10.2.0-P0829 \
+	&& rm /opt/avr-gcc-10.2.0-P0829 \
+	&& ln -sfn $PREFIX_WIN /opt/avr-gcc-10.2.0-P0829 \
+	&& tar chzvf avr-gcc-10.2.0-P0829-$HOST_WIN.tar.gz avr-gcc-10.2.0-P0829 \
+	&& rm /opt/avr-gcc-10.2.0-P0829
